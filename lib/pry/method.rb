@@ -76,6 +76,7 @@ class Pry
       #
       def from_binding(binding)
         meth_name = binding.eval('::Kernel.__method__')
+        puts "meth_name: #{meth_name}"
         if [:__script__, nil].include?(meth_name)
           nil
         else
